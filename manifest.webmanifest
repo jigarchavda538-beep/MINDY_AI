@@ -1,0 +1,9 @@
+{
+  "name": "JIGAR AI",
+  "short_name": "JIGAR AI",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#050507",
+  "theme_color": "#050507",
+  "description": "A simple AI workspace for everyone."
+}

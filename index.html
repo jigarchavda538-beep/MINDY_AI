@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#050507">
+  <meta name="description" content="JIGAR AI — a simple AI workspace for everyone.">
+  <title>JIGAR AI — Your AI Assistant</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar" id="sidebar">
+    <a class="brand" href="#" data-page="home"><span class="brand-mark">✦</span><span>JIGAR <b>AI</b></span></a>
+    <button class="new-chat" id="newChat">＋ <span data-i18n="newChat">New chat</span></button>
+    <div class="nav-label">WORKSPACE</div>
+    <nav class="nav-list">
+      <button class="nav-item active" data-page="home"><span>⌂</span><span data-i18n="home">Home</span></button>
+      <button class="nav-item" data-page="chat"><span>◌</span><span data-i18n="chat">AI Chat</span></button>
+      <button class="nav-item" data-page="search"><span>⌕</span><span data-i18n="search">AI Search</span></button>
+      <button class="nav-item" data-page="coding"><span>⌘</span><span data-i18n="coding">AI Coding</span></button>
+      <button class="nav-item" data-page="image"><span>▧</span><span data-i18n="image">AI Image</span></button>
+      <button class="nav-item" data-page="study"><span>▤</span><span data-i18n="study">Study Helper</span></button>
+      <button class="nav-item" data-page="history"><span>◷</span><span data-i18n="history">History</span></button>
+    </nav>
+    <div class="sidebar-bottom">
+      <div class="guest-card"><span class="guest-dot"></span><div><b>Guest access</b><small>Start using JIGAR AI</small></div></div>
+      <button class="nav-item" data-page="settings"><span>⚙</span><span data-i18n="settings">Settings</span></button>
+      <div class="sidebar-foot">JIGAR AI <span>v3.0</span></div>
+    </div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <button class="mobile-menu" id="menuBtn" aria-label="Open menu">☰</button>
+      <div class="mobile-brand"><span class="brand-mark">✦</span> JIGAR <b>AI</b></div>
+      <label class="top-search"><span>⌕</span><input id="globalSearch" placeholder="Search anything..." aria-label="Search anything"><kbd>Enter</kbd></label>
+      <div class="top-controls">
+        <button class="round-btn" id="themeToggle" title="Toggle theme">☾</button>
+        <select id="language" aria-label="Language"><option value="en">English</option><option value="gu">ગુજરાતી</option><option value="hi">हिन्दी</option></select>
+        <button class="avatar" id="profileBtn" title="Guest profile">G</button>
+      </div>
+    </header>
+
+    <section class="page active" id="page-home">
+      <div class="hero">
+        <div class="hero-symbol"><span>✧</span></div>
+        <p class="eyebrow">YOUR SIMPLE AI WORKSPACE</p>
+        <h1>JIGAR <span>AI</span></h1>
+        <h2>Your Free AI Assistant</h2>
+        <p class="hero-sub">Ask · Search · Create · Learn · Grow</p>
+        <form class="hero-prompt" id="heroForm">
+          <span class="prompt-icon">◌</span>
+          <input id="heroInput" placeholder="Ask anything..." autocomplete="off">
+          <button aria-label="Send prompt">➜</button>
+        </form>
+        <div class="hero-note"><span class="status-dot"></span> Simple, helpful AI for everyone</div>
+      </div>
+
+      <div class="section-heading"><div><p class="eyebrow">EXPLORE TOOLS</p><h2>What can I help you with?</h2></div><span class="tiny-label">ALL IN ONE PLACE</span></div>
+      <div class="tools-grid">
+        <button class="tool-card" data-page="chat"><span class="tool-icon purple">◌</span><b>AI Chat</b><small>Ask questions and get help</small><span class="card-arrow">↗</span></button>
+        <button class="tool-card" data-page="search"><span class="tool-icon blue">⌕</span><b>AI Search</b><small>Find information on the web</small><span class="card-arrow">↗</span></button>
+        <button class="tool-card" data-page="coding"><span class="tool-icon amber">&lt;/&gt;</span><b>AI Coding</b><small>Write, explain and debug code</small><span class="card-arrow">↗</span></button>
+        <button class="tool-card" data-page="image"><span class="tool-icon pink">▧</span><b>AI Image</b><small>Create images from ideas</small><span class="card-arrow">↗</span></button>
+        <button class="tool-card" data-page="study"><span class="tool-icon green">▤</span><b>Study Helper</b><small>Learn step by step</small><span class="card-arrow">↗</span></button>
+      </div>
+
+      <div class="lower-grid">
+        <div class="glass-panel quick-panel">
+          <div class="panel-heading"><h3>Quick prompts</h3><span>TRY ONE</span></div>
+          <button class="quick-prompt" data-prompt="Explain artificial intelligence in simple words.">Explain AI in simple words <span>→</span></button>
+          <button class="quick-prompt" data-prompt="Create a beginner-friendly weekly study plan.">Create a study plan <span>→</span></button>
+          <button class="quick-prompt" data-prompt="Help me plan a simple responsive website.">Plan a responsive website <span>→</span></button>
+        </div>
+        <div class="glass-panel about-panel"><div class="about-icon">✦</div><h3>Made for everyone</h3><p>Use JIGAR AI on your phone, tablet or laptop. No account is required in this starter version.</p><span class="subtle-tag">MOBILE + DESKTOP</span></div>
+      </div>
+    </section>
+
+    <section class="page" id="page-chat">
+      <div class="page-heading"><div><p class="eyebrow">JIGAR AI / CHAT</p><h1>AI Chat</h1><p>Ask anything and explore ideas.</p></div><button class="outline-btn" id="clearChat">＋ New conversation</button></div>
+      <div class="glass-panel chat-panel"><div class="messages" id="messages"><div class="empty-chat"><div class="empty-symbol">✧</div><h2>What’s on your mind?</h2><p>Ask a question to start chatting with JIGAR AI.</p><div class="suggestions"><button data-chat-prompt="Explain a difficult topic in simple words.">Explain a topic</button><button data-chat-prompt="Give me some creative project ideas.">Project ideas</button><button data-chat-prompt="Help me write a professional email.">Write an email</button></div></div></div>
+        <form class="chat-composer" id="chatForm"><textarea id="chatInput" rows="1" placeholder="Message JIGAR AI..."></textarea><button aria-label="Send message">➜</button></form><p class="disclaimer">AI can make mistakes. Verify important information.</p>
+      </div>
+    </section>
+
+    <section class="page" id="page-search">
+      <div class="page-heading"><div><p class="eyebrow">JIGAR AI / DISCOVER</p><h1>AI Search</h1><p>Explore information from the web.</p></div></div>
+      <div class="glass-panel feature-panel"><div class="feature-icon blue">⌕</div><h2>What do you want to find?</h2><form class="feature-form" id="searchForm"><input id="searchInput" placeholder="Search anything on the web..."><button>Search →</button></form><div class="result-area" id="searchResult"></div></div>
+    </section>
+
+    <section class="page" id="page-coding">
+      <div class="page-heading"><div><p class="eyebrow">JIGAR AI / BUILD</p><h1>AI Coding</h1><p>Build, understand and improve your code.</p></div></div>
+      <div class="glass-panel feature-panel"><div class="feature-icon amber">&lt;/&gt;</div><h2>What are we building?</h2><label class="field-label">Programming language</label><select class="field-select" id="codeLanguage"><option>HTML, CSS and JavaScript</option><option>C</option><option>Python</option><option>Java</option><option>PHP</option><option>SQL</option></select><textarea class="large-field" id="codePrompt" placeholder="Describe what you want to build or explain..."></textarea><button class="action-btn" id="codeBtn">Generate code →</button><div class="result-area" id="codeResult"></div></div>
+    </section>
+
+    <section class="page" id="page-image">
+      <div class="page-heading"><div><p class="eyebrow">JIGAR AI / CREATE</p><h1>AI Image</h1><p>Turn your imagination into an image.</p></div></div>
+      <div class="glass-panel feature-panel"><div class="feature-icon pink">▧</div><h2>Describe your image</h2><textarea class="large-field" id="imagePrompt" placeholder="Describe the image you want to create..."></textarea><label class="field-label">Image format</label><select class="field-select" id="imageSize"><option value="1024x1024">Square</option><option value="1536x1024">Landscape</option><option value="1024x1536">Portrait</option></select><button class="action-btn" id="imageBtn">✦ Generate image</button><div class="result-area" id="imageResult"></div></div>
+    </section>
+
+    <section class="page" id="page-study">
+      <div class="page-heading"><div><p class="eyebrow">JIGAR AI / LEARN</p><h1>Study Helper</h1><p>Understand topics with simple explanations.</p></div></div>
+      <div class="study-shortcuts"><button data-study="Explain this topic in simple Gujarati with an example: ">Explain a topic <span>↗</span></button><button data-study="Create 10 practice MCQs with answers about: ">Practice MCQs <span>↗</span></button><button data-study="Create a weekly study timetable for: ">Study timetable <span>↗</span></button></div>
+      <div class="glass-panel feature-panel"><h2>What are you learning today?</h2><textarea class="large-field" id="studyPrompt" placeholder="Enter your subject, chapter or question..."></textarea><button class="action-btn" id="studyBtn">Learn with JIGAR AI →</button><div class="result-area" id="studyResult"></div></div>
+    </section>
+
+    <section class="page" id="page-history">
+      <div class="page-heading"><div><p class="eyebrow">JIGAR AI / RECENT</p><h1>History</h1><p>Recent chats saved on this device.</p></div><button class="outline-btn" id="clearHistory">Clear history</button></div>
+      <div class="glass-panel history-list" id="historyList"><p class="muted">No chats saved yet.</p></div>
+    </section>
+
+    <section class="page" id="page-settings">
+      <div class="page-heading"><div><p class="eyebrow">JIGAR AI / PREFERENCES</p><h1>Settings</h1><p>Make the workspace yours.</p></div></div>
+      <div class="glass-panel settings-panel"><label class="field-label">Language</label><select class="field-select" id="settingsLanguage"><option value="en">English</option><option value="gu">ગુજરાતી</option><option value="hi">हिन्दी</option></select><label class="field-label">Appearance</label><select class="field-select" id="appearance"><option value="dark">Dark black glass</option><option value="light">Light</option></select><button class="action-btn" id="saveSettings">Save settings</button><p class="muted">Guest mode is enabled. Chat history is stored only in this browser.</p></div>
+    </section>
+    <footer class="footer">JIGAR AI <span>·</span> Simple AI for everyone</footer>
+  </main>
+</div>
+<div class="toast" id="toast"></div>
+<script src="app.js"></script>
+</body></html>
